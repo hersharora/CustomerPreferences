@@ -20,13 +20,11 @@ namespace Preferences.Models
         public string Name { get; set; }
 
         [EnumDataType(typeof(Template))]
-        [DefaultValue((int)Template.SingleImageAd)]
         public Template TemplateId { get; set; }
 
         public DateTime? StartDate { get; set; }
 
         [EnumDataType(typeof(Frequency))]
-        [DefaultValue((int)Frequency.Daily)]
         public Frequency Repeat { get; set; }
 
         public bool IsActive {get; set;}
