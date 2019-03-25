@@ -7,12 +7,18 @@ Preferences.Data - This is the implementation for the EF code first. The impleme
 Preferences.DTO - This project contains the business models exposed by the API. Currently there is just one model for CustomerPreference, but as the app scales, there could be separate models for add and update.
 Preferences.API - The main API project providing a way to perform basic CRUD operation using EF repositories. Here the endpoints currently implemented - 
 
-GET {basePath}/api/customerpreference/ - returns all entities.
-GET {basePath}/api/customerpreference/{id} - returns an entity by id
-GET {basePath}/api/customerpreference/customer/{customerID} - returns all entities for the provided customerId.
-GET {basePath}/api/customerpreference/{id} - returns an entity by id
-DELETE {basePath}/api/customerpreference/{id} - deletes an entity returned by the provided id.
-POST {basePath}/api/customerpreference/ -adds an entity
+###### returns all entities
+GET {basePath}/api/customerpreference/ 
+###### returns an entity by id
+GET {basePath}/api/customerpreference/{id}
+###### returns all entities for the provided customerId
+GET {basePath}/api/customerpreference/customer/{customerID} 
+###### returns an entity by id
+GET {basePath}/api/customerpreference/{id}
+###### deletes an entity returned by the provided id
+DELETE {basePath}/api/customerpreference/{id} 
+###### adds an entity
+POST {basePath}/api/customerpreference/ 
 example content -
 content-type: application/json
 {
@@ -24,13 +30,13 @@ content-type: application/json
     "IsActive": true   
 }
 
-TemplateID and Repeat are stored as Ids and map to an enum in background and the enums can be used to get string value for the corresponding int. A better place to store those string value would be the database itself.
+TemplateID and Repeat are stored as Ids and map to an enum in background and the enums can be used to get string value for the corresponding int. A better place to store those string values would be the database itself.
 
 
 NOTE: Though I prefer .Net core to build APIs, this one has been built using .NET Framework in order to ensure this would work incase the test machine doesn't have .Net Core.
 
 
-Steps to setup the API -
+### Steps to setup the API -
 1) Build the solution CustomerPreferences.sln either using MSBuild or through Visual Studio.
 2) Create the database for Api through following steps:
     a. Set up the connection string to connect to a database -
