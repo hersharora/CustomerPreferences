@@ -13,8 +13,6 @@ GET {basePath}/api/customerpreference/
 GET {basePath}/api/customerpreference/{id}
 ###### returns all entities for the provided customerId
 GET {basePath}/api/customerpreference/customer/{customerID} 
-###### returns an entity by id
-GET {basePath}/api/customerpreference/{id}
 ###### deletes an entity returned by the provided id
 DELETE {basePath}/api/customerpreference/{id} 
 ###### adds an entity
@@ -33,7 +31,9 @@ content-type: application/json
 TemplateID and Repeat are stored as Ids and map to an enum in background and the enums can be used to get string value for the corresponding int. A better place to store those string values would be the database itself.
 
 
-NOTE: Though I prefer .Net core to build APIs, this one has been built using .NET Framework in order to ensure this would work incase the test machine doesn't have .Net Core.
+NOTE: 
+a)Though I prefer .Net core to build APIs, this one has been built using .NET Framework in order to ensure this would work incase the test machine doesn't have .Net Core.
+b) This project doesnt fully implement validations. Also, it does not implement any API security measures.
 
 
 ### Steps to setup the API -
